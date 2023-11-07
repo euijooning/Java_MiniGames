@@ -6,7 +6,7 @@ public class Seat {
     private int count;
 
     public Seat() { // 생성자, 총 24석
-        seat = new int[6][3];
+        seat = new int[9][2];
         count = 18;
     }
 
