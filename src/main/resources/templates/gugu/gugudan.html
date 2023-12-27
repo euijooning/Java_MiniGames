@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 - 검색하기</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/gugu/gugudan}" th:object="${gugudan}" method="post">
+    <label for="dan">원하는 단 숫자 입력:</label>
+    <input type="number" id="dan" name="dan" required>
+    <button type="submit">구구단 보기</button>
+    <button type="button" onclick="location.href='/gugu/all'">전체 구구단 보기</button>
+</form>
+
+<h2 th:if="${dan}">[<span th:text="${dan}"></span>단]</h2>
+<table border="1" th:if="${dan}">
+    <tr th:each="i : ${#numbers.sequence(1, 9)}">
+        <td th:text="${dan} + ' X ' + ${i} + ' = ' + ${dan * i}"></td>
+    </tr>
+</table>
+
+<h2 th:if="${allGugu}">[전체 구구단]</h2>
+<table border="1" th:if="${allGugu}">
+    <tr th:each="i : ${#numbers.sequence(2, 9)}">
+        <td>
+            <table>
+                <tr th:each="j : ${#numbers.sequence(1, 9)}">
+                    <td th:text="${i} + ' X ' + ${j} + ' = ' + ${i * j}"></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

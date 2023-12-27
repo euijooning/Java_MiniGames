@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 - 전체</title>
+</head>
+<body>
+
+<h2 th:if="${allGugu}">[전체 구구단]</h2>
+<button type="button" onclick="location.href='/gugu'">돌아가기</button>
+<table border="1" th:if="${allGugu}">
+    <tr th:each="i : ${#numbers.sequence(2, 9)}">
+        <td>
+            <table>
+                <tr>
+                    <!-- 각 단의 제목 행 추가 -->
+                    <th th:text="${i + ' 단'}"></th>
+                </tr>
+
+                <!-- 각 단의 구구단 내용 행 -->
+                <tr th:each="j : ${#numbers.sequence(1, 9)}">
+                    <td th:text="${i} + ' X ' + ${j} + ' = ' + ${i * j}"></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
