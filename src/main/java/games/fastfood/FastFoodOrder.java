@@ -1,4 +1,4 @@
-package games.FastFood;
+package games.fastfood;
 
 import java.util.Scanner;
 

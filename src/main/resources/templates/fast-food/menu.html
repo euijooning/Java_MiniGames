@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>패스트푸드 메뉴</title>
+</head>
+<body>
+<form action="/fast-food/order" method="post">
+    <label for="menuNum">메뉴 선택:</label>
+    <select name="menuNum" id="menuNum">
+        <option value="1">갈릭버거</option>
+        <option value="2">싸이버거</option>
+        <option value="3">갈릭치킨</option>
+        <!-- 다른 메뉴 옵션 추가 -->
+    </select>
+
+    <label for="sideNum">사이드 메뉴 선택:</label>
+    <select name="sideNum" id="sideNum">
+        <option value="1">감자튀김</option>
+        <option value="2">콜라</option>
+        <option value="3">사이다</option>
+        <!-- 다른 사이드 메뉴 옵션 추가 -->
+    </select>
+
+    <label for="paymentMethod">결제 방법:</label>
+    <input type="text" name="paymentMethod" id="paymentMethod" placeholder="결제 방법을 입력하세요">
+
+    <button type="submit">주문하기</button>
+</form>
+</body>
+</html>
