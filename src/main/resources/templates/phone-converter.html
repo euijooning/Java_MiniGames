@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>휴대폰 키패드 변환기</title>
+</head>
+<body>
+<h1>휴대폰 키패드 변환기</h1>
+
+<form action="#" th:action="@{/phone-converter}" th:method="post">
+    <label for="phoneNumber">번호 입력 :</label>
+    <input type="text" id="phoneNumber" name="phoneNumber" required>
+    <button type="submit">바꾸기</button>
+</form>
+
+<p>숫자를 입력하면, 해당하는 문자가 나옵니다!!!</p>
+
+<div th:if="${result}">
+    <p th:text="'결과: ' + ${result}"></p>
+</div>
+</body>
+</html>
