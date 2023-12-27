@@ -1,0 +1,19 @@
+<!-- guess.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자 맞추기 게임</title>
+
+</head>
+<body>
+<h2 th:text="${message}"></h2>
+<form method="post">
+    <label for="guess">숫자 입력:</label>
+    <input type="number" id="guess" name="guess" required>
+    <button type="submit">확인</button>
+</form>
+</body>
+</html>
