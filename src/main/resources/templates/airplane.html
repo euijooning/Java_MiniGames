@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Seat Reservation System</title>
+</head>
+<body>
+
+<h2>비행기 좌석 예약 시스템</h2>
+
+<p>남은 좌석 수: <span th:text="${count}"></span></p>
+
+<form action="/airplane/reserve" method="post">
+    <p>예약하실 좌석을 입력해주세요</p>
+    <p>행 : <input type="number" name="row" required/></p>
+    <p>열 : <input type="number" name="col" required/></p>
+    <button type="submit">예약하기</button>
+</form>
+
+<div th:if="${message}">
+    <p th:text="${message}" style="color: green;"></p>
+</div>
+
+<div th:if="${error}">
+    <p th:text="${error}" style="color: red;"></p>
+    <!-- 예약이 불가능한 좌석일 때 이전으로 돌아가는 버튼 -->
+    <a href="/airplane" th:href="@{/airplane}">
+        <button type="button">목록으로</button>
+    </a>
+</div>
+
+<!--<p>빈 좌석 목록:</p>-->
+<!--<ul>-->
+<!--    <li th:each="seatInfo : ${emptySeats}" th:text="'행: ' + ${seatInfo[0]} + ', 열: ' + ${seatInfo[1]}"></li>-->
+<!--</ul>-->
+<p th:if="${emptySeats != null && emptySeats.size() > 0}">빈 좌석 목록 : </p>
+<ul th:if="${emptySeats != null && emptySeats.size() > 0}">
+    <li th:each="seatInfo : ${emptySeats}" th:text="'[행] : ' + ${seatInfo[0]} + ', [열] : ' + ${seatInfo[1]}"></li>
+</ul>
+<!--<p th:if="${emptySeats == null || emptySeats.size() == 0}">예약이 모두 마감되었습니다.</p>-->
+
+</body>
+</html>
