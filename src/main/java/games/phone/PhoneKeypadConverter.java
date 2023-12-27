@@ -92,8 +92,4 @@ public class PhoneKeypadConverter {
         System.out.print("입력 : ");
         return sc.next();
     }
-
-
-
-
 }

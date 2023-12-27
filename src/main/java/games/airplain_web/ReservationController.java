@@ -19,7 +19,7 @@ public class ReservationController {
         this.seat = seat;
     }
 
-    @GetMapping()
+    @GetMapping
     public String index(Model model) {
         model.addAttribute("count", seat.getCount());
         model.addAttribute("emptySeats", seat.getEmptySeats());

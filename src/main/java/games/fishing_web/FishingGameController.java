@@ -4,11 +4,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.Random;
 import java.util.Scanner;
 
 @Controller
+@RequestMapping("/fishing-game")
 public class FishingGameController {
 
     private int[][] lake = new int[5][5];
@@ -16,7 +18,7 @@ public class FishingGameController {
     private int[] input = new int[2];
     private Scanner sc = new Scanner(System.in);
 
-    @GetMapping("/fish-game")
+    @GetMapping
     public String showFishGame(Model model) {
         if (fishCount == 0) {
             fishCount = randomFish(lake);
@@ -28,7 +30,7 @@ public class FishingGameController {
         return "fishing-game/fishingGame";
     }
 
-    @PostMapping("/fish-game")
+    @PostMapping
     public String handleMove(int direction, Model model) {
         fishermanMove(direction, input);
         fishCount = fishCheck(lake, input, fishCount);
