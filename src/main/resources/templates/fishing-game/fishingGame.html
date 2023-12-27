@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>낚시 게임</title>
+</head>
+<body>
+<h1>낚시 게임</h1>
+<p>물고기 수 : <span th:text="${fishCount}"></span></p>
+<form action="/fish-game" method="post">
+    <label>Move Direction:
+        <select name="direction">
+            <option value="1">Up</option>
+            <option value="2">Down</option>
+            <option value="3">Left</option>
+            <option value="4">Right</option>
+        </select>
+    </label>
+    <input type="submit" value="Move">
+</form>
+<p>Lake:</p>
+<!-- Display the lake using Thymeleaf -->
+<table>
+    <tr th:each="row, rowStat : ${lake}">
+        <td th:each="cell, colStat : ${row}">
+            <span th:if="${colStat.index eq input[1] and rowStat.index eq input[0]}">X</span>
+            <span th:if="${lake[rowStat.index][colStat.index] eq 0}">○</span>
+            <span th:if="${lake[rowStat.index][colStat.index] eq 1}">■</span>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
