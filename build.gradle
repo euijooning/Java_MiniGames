@@ -31,6 +31,15 @@ dependencies {
     implementation 'org.modelmapper:modelmapper:2.4.4'
 }
 
-tasks.named('test') {
-    useJUnitPlatform()
+//tasks.named('test') {
+//    useJUnitPlatform()
+//}
+// 이거
+test.onlyIf {
+    !project.hasProperty('test')
+}
+
+// 이거
+jar {
+    enabled = false
 }
