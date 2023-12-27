@@ -1,4 +1,4 @@
-package games.guessNumber;
+package games.guessNumber_web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
