@@ -5,25 +5,22 @@
 
 ## 📋 프로그램 목록
 ### 1. 패스트푸드 주문하기 
-  🍔 **시연 영상 링크** : https://youtu.be/PyYwjgQkPF8 <br>
+  🍔 **시연 영상 링크** : https://youtu.be/1I-By6orFGs <br>
   
 ### 2. 비행기 좌석 예약 시스템
   ✈️ **시연 영상 링크** : https://youtu.be/uvle36x_5hY <br>
 
 ### 3. 물고기 잡기 게임 
-  🐟 **시연 영상 링크** : https://youtu.be/TIJMQKV1Ggw <br>
+  🐟 **시연 영상 링크** : https://youtu.be/29BWH81rNbQ <br>
 
 ### 4. 가전제품 구매하기
-  🖥️ **시연 영상 링크** : https://youtu.be/SrKXPXBrbCY <br>
+  🖥️ **시연 영상 링크** : https://youtu.be/q1YgyFh-ehc <br>
 
 ### 5. 31게임
-  🎯 **시연 영상 링크** : https://youtu.be/-oYElxOPPwM <br>
+  🎯 **시연 영상 링크** : https://youtu.be/casxyLOv_5U <br>
 
 ### 6. 휴대폰 키패드  
-  📱 **시연 영상 링크** : https://youtu.be/SrKXPXBrbCY <br>
+  📱 **시연 영상 링크** : https://youtu.be/Y9miSoKmTxQ <br>
 
-### 7. 계산기
-  🔢 **시연 영상 링크** : https://youtu.be/wyk8HcIEuO8 <br>
-
-### 8. 구구단 출력하기
-  9️⃣ **시연 영상 링크** : https://youtu.be/JtnxzL1AVPE <br>
+### 7. 구구단 출력하기
+  9️⃣ **시연 영상 링크** : https://youtu.be/qqwK2SuSnTo <br>
